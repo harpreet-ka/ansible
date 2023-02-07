@@ -1,0 +1,13 @@
+ 1 # Basic provisioning example
+  2 - name: Ansible test
+  3   hosts: localhost
+  4   tasks:
+  5   - name: launching AWS instance using Ansible
+  6 
+  7     ec2:
+  8       key_name: harpreet
+  9       instance_type: t2.micro
+ 10       image: ami-0aa7d40eeae50c9a9
+ 11       region: us-east-1
+ 12       instance_tags:
+ 13           name: demo_sever
